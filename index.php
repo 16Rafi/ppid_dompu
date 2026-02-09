@@ -48,7 +48,7 @@ require_once 'includes/security_headers.php';
             <div class="pelayanan-main">
                 <a href="pages/permohonan-informasi.php" class="pelayanan-box large">
                     <div class="box-icon">
-                        <div class="icon-placeholder"></div>
+                        <img src="img/form.png" alt="Formulir" class="icon-placeholder">
                     </div>
                     <div class="box-content">
                         <h3>Ajukan Permohonan Informasi</h3>
@@ -57,7 +57,7 @@ require_once 'includes/security_headers.php';
 
                 <a href="pages/pengajuan-keberatan.php" class="pelayanan-box large">
                     <div class="box-icon">
-                        <div class="icon-placeholder"></div>
+                        <img src="img/form.png" alt="Formulir" class="icon-placeholder">
                     </div>
                     <div class="box-content">
                         <h3>Pengajuan Keberatan</h3>
@@ -66,7 +66,7 @@ require_once 'includes/security_headers.php';
                 
                 <a href="https://aduannomor.id/" class="pelayanan-box large" target="_blank" rel="noopener noreferrer">
                     <div class="box-icon">
-                        <div class="icon-placeholder"></div>
+                        <img src="img/form.png" alt="Formulir" class="icon-placeholder">
                     </div>
                     <div class="box-content">
                         <h3>Pengaduan Nomor</h3>
@@ -75,7 +75,7 @@ require_once 'includes/security_headers.php';
                 
                 <a href="https://aduankonten.id/" class="pelayanan-box large" target="_blank" rel="noopener noreferrer">
                     <div class="box-icon">
-                        <div class="icon-placeholder"></div>
+                        <img src="img/form.png" alt="Formulir" class="icon-placeholder">
                     </div>
                     <div class="box-content">
                         <h3>Pengaduan Konten</h3>
