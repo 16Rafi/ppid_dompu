@@ -1,0 +1,22 @@
+# Composer vendor directory - do not commit
+vendor/
+
+# Composer lock file (optional - commit if you want reproducible installs)
+# composer.lock
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Ignore uploaded files (user uploads, large binaries)
+uploads/
