@@ -1,176 +1,177 @@
-# PPID Kabupaten Dompu
+# PPID Kabupaten Dompu - Documentation
 
-Website PPID (Pejabat Pengelola Informasi dan Dokumentasi) untuk Kabupaten Dompu yang dibangun dengan HTML, CSS, PHP, dan JavaScript dengan database MySQL.
+Dokumentasi ini dibuat untuk serah terima sistem PPID kepada instansi pemerintah yang akan melakukan konfigurasi dan deployment sendiri.
 
-## Fitur
+**Isi Dokumentasi**
+1. Ringkasan Sistem
+**Teknologi/Framework**\n- Backend: PHP (tanpa framework)\n- Database: MySQL/MariaDB\n- Frontend: HTML, CSS, JavaScript (tanpa framework)\n\n
+2. Fitur Utama
+3. Struktur Proyek
+4. Persyaratan Server
+5. Instalasi Lokal
+6. Konfigurasi Penting
+7. Database dan Skema
+8. Modul Admin
+9. Halaman Publik
+10. Upload dan File
+11. Keamanan
+12. Deployment Produksi
+13. Troubleshooting
 
-- **Header Sticky**: Header yang mengikuti scroll dengan menu navigasi lengkap
-- **Hero Section**: Tampilan hero dengan gambar Gedung Kominfo Kabupaten Dompu
-- **Website Pemerintah**: Menampilkan website-website pemerintah Kabupaten Dompu lainnya
-- **Berita Terkini**: Menampilkan berita-berita terbaru dengan format yang menarik
-- **Admin Panel**: Sistem login admin untuk mengelola konten website
-- **Responsive Design**: Tampilan yang optimal di berbagai perangkat
-- **Color Palette**: Menggunakan palet warna yang telah ditentukan
-- **Keamanan Lengkap**: CSRF protection, rate limiting, audit log, HTML sanitasi, upload hardening
+**Ringkasan Sistem**
+Website PPID (Pejabat Pengelola Informasi dan Dokumentasi) berbasis PHP, MySQL, HTML/CSS/JS. Sistem mencakup publikasi berita, halaman dinamis, permohonan informasi, pengajuan keberatan, serta daftar informasi publik (DIP). Admin panel digunakan untuk mengelola semua konten.
 
-## Instalasi
+**Fitur Utama**
+- Berita (CRUD) dengan sanitasi HTML.
+- Halaman dinamis berbasis block di `pages/template.php?slug=...`.
+- Permohonan informasi publik dan pengajuan keberatan.
+- DIP (Daftar Informasi Publik) dengan statistik dan pagination.
+- Menu navigasi yang bisa diatur dari admin.
+- Website eksternal (perangkat daerah, portal, dll).
+- Export laporan (permohonan dan keberatan) ke CSV.
+- Keamanan: CSRF, audit log, hardening upload, security headers.
 
-### 1. Persyaratan
-
-- XAMPP (Apache, MySQL, PHP)
-- Composer (untuk dependency management)
-- Web browser modern
-
-### 2. Langkah Instalasi
-
-1. **Ekstrak folder project** ke dalam `htdocs` XAMPP Anda:
-   ```
-   C:\xampp\htdocs\ppid_dompu\
-   ```
-
-2. **Install Composer Dependencies**:
-   - Buka terminal/command prompt di folder project
-   - Jalankan perintah:
-     ```bash
-     composer install
-     ```
-   - Ini akan menginstall HTMLPurifier untuk sanitasi konten berita
-
-3. **Import Database**:
-   - Buka phpMyAdmin (http://localhost/phpmyadmin)
-   - Buat database baru dengan nama `db_ppid_dompu`
-   - Import file `database.sql` yang ada di folder project
-
-4. **Konfigurasi**:
-   - Pastikan konfigurasi database di `includes/config.php` sudah benar
-   - Default database settings:
-     - Host: localhost
-     - Username: root
-     - Password: (kosong)
-     - Database: db_ppid_dompu
-
-5. **Akses Website**:
-   - Start Apache dan MySQL di XAMPP
-   - Buka browser dan akses: `http://localhost/ppid_dompu`
-
-### 3. Login Admin
-
-- URL: `http://localhost/ppid_dompu/admin/index.php`
-- Username: `admin`
-- Password: `admin123`
-
-## Struktur Folder
-
+**Struktur Proyek**
 ```
 ppid_dompu/
-├── admin/                  # Halaman admin
-│   ├── index.php           # Login admin
-│   ├── dashboard.php       # Dashboard admin
-│   └── logout.php          # Logout
-├── css/
-│   └── style.css          # Stylesheet utama
-├── js/
-│   └── script.js          # JavaScript utama
-├── pages/                  # Halaman statis
-│   ├── template.php       # Template halaman
-│   └── berita-detail.php  # Detail berita
-├── includes/
-│   └── config.php         # Konfigurasi database
-├── img/                   # Folder gambar
-├── uploads/               # Folder upload gambar
-├── index.php              # Halaman utama
-└── database.sql           # File database SQL
+  admin/
+    index.php
+    dashboard.php
+    laporan.php
+    export_laporan.php
+    export_laporan_keberatan.php
+    permohonan/
+    keberatan/
+    dip/
+    menus/
+    pages/
+  css/style.css
+  js/script.js
+  includes/
+    config.php
+    security_headers.php
+    permohonan_service.php
+    keberatan_service.php
+    file_upload.php
+    email_service.php
+  pages/
+    template.php
+    dip.php
+    permohonan-informasi.php
+    pengajuan-keberatan.php
+    daftar-permohonan-publik.php
+    daftar-keberatan-publik.php
+  uploads/
+  database/database.sql
+  index.php
 ```
 
-## Color Palette
+**Persyaratan Server**
+- PHP 8.1+ (disarankan 8.2)
+- MySQL/MariaDB
+- Apache/Nginx
+- Ekstensi PHP: `mysqli`, `mbstring`, `fileinfo`, `openssl`
+- Composer (untuk dependency HTMLPurifier dan PHPMailer)
 
-Website menggunakan palet warna berikut:
+**Instalasi Lokal (XAMPP contoh)**
+1. Ekstrak proyek ke `C:\xampp\htdocs\ppid_dompu`.
+2. Jalankan `composer install` di root proyek.
+3. Buat database `db_ppid_dompu`.
+4. Import `database/database.sql`.
+5. Buka `http://localhost/ppid_dompu`.
 
-- **#093A5A**: Dark Blue (header, background utama)
-- **#A0861D**: Gold/Brown (aksen, hover)
-- **#F4B800**: Bright Yellow/Orange (highlight, buttons)
-- **#7392A8**: Light Blue/Grey (text sekunder)
-- **#FCFDFD**: Off-white (background konten)
+**Konfigurasi Penting**
+File: `includes/config.php`
+- `DB_HOST`, `DB_USER`, `DB_PASS`, `DB_NAME`
+- `BASE_URL` wajib disesuaikan dengan domain produksi.
 
-## Fitur Menu
-
-### Menu Utama
-- **BERANDA**: Halaman utama
-- **DIP**: Daftar Informasi Publik
-- **PROFIL PPID**: Profil PPID (dengan dropdown)
-  - Visi Misi
-  - Struktur Organisasi
-  - Tugas dan Fungsi
-- **PROSEDUR**: Prosedur layanan (dengan dropdown)
-  - Permohonan Informasi
-  - Keberatan Informasi
-- **KEUANGAN**: Informasi keuangan
-- **LHKPN & LHKASN**: Laporan harta kekayaan
-- **UNDUH**: Halaman download
-- **SKM**: Survei Kepuasan Masyarakat
-- **FKP**: Forum Konsultasi Publik
-- **SP**: Standar Pelayanan
-- **KONTAK**: Halaman kontak
-- **LOGIN**: Login admin
-
-## Database
-
-Database terdiri dari tabel-tabel berikut:
-
-- `users`: Data pengguna admin
-- `news`: Data berita/artikel
-- `pages`: Data halaman statis
-- `menus`: Data menu navigasi
-- `settings`: Pengaturan website
-- `external_links`: Link website eksternal
-- `documents`: Data dokumen/download
-
-## Customization
-
-### Mengubah Hero Image
-Ganti URL gambar di `index.php` pada bagian hero section:
-```html
-<img src="https://via.placeholder.com/1920x600/093A5A/FFFFFF?text=Gedung+Kominfo+Kabupaten+Dompu" alt="Gedung Kominfo Kabupaten Dompu">
+Contoh:
+```
+// http://domain-anda/ppid
+define('BASE_URL', 'https://ppid.domain.go.id/');
 ```
 
-### Mengubah Informasi Website
-Edit data di tabel `settings` melalui phpMyAdmin atau admin panel.
+Email:
+- Lihat `EMAIL_SETUP.md`
+- Konfigurasi di `includes/email_config.php`
 
-### Menambah/Mengedit Menu
-Kelola menu melalui tabel `menus` atau melalui admin panel.
+**Database dan Skema (Ringkasan)**
+Tabel utama:
+- `users` admin login.
+- `news` berita.
+- `pages` halaman dinamis (judul, slug, content legacy).
+- `page_blocks` + subtable: `page_text_blocks`, `page_table_blocks`, `page_table_columns`, `page_table_rows`, `page_table_cells`, `page_files`, `page_links`, `page_image_blocks`.
+- `menus` navigasi.
+- `settings` setting situs.
+- `permohonan_informasi` permohonan publik.
+- `log_status_permohonan` riwayat status permohonan.
+- `keberatan` pengajuan keberatan.
+- `log_status_keberatan` riwayat status keberatan.
+- `daftar_informasi_publik` (DIP).
+- `files` metadata lampiran.
+- `external_websites` website eksternal.
 
-## Support
+Catatan migration:
+- Jika DB lama masih memakai struktur keberatan lama (`permohonan_id`, `alasan_keberatan`), lakukan rename dan buat tabel baru seperti di dokumentasi migrasi.
 
-Jika mengalami masalah:
+**Modul Admin**
+URL admin: `BASE_URL/admin/index.php`
 
-1. Pastikan XAMPP berjalan dengan baik
-2. Periksa konfigurasi database di `includes/config.php`
-3. Pastikan database sudah diimport dengan benar
-4. Clear cache browser jika tampilan tidak update
+Modul:
+- Dashboard: `admin/dashboard.php`
+- Permohonan: `admin/permohonan/index.php`
+- Keberatan: `admin/keberatan/index.php`
+- DIP: `admin/dip/index.php`
+- Pages: `admin/pages/index.php`
+- Menus: `admin/menus/index.php`
+- Laporan: `admin/laporan.php`
+- Export CSV permohonan: `admin/export_laporan.php`
+- Export CSV keberatan: `admin/export_laporan_keberatan.php`
 
-## Keamanan
+**Halaman Publik**
+- Beranda: `index.php`
+- Berita: `pages/berita.php`
+- Detail berita: `pages/berita-detail.php?slug=...`
+- Template halaman dinamis: `pages/template.php?slug=...`
+- Permohonan informasi: `pages/permohonan-informasi.php`
+- Pengajuan keberatan: `pages/pengajuan-keberatan.php`
+- DIP: `pages/dip.php`
+- Daftar permohonan publik: `pages/daftar-permohonan-publik.php`
+- Daftar keberatan publik: `pages/daftar-keberatan-publik.php`
 
-Website ini dilengkapi dengan fitur keamanan lengkap:
-- ✅ **CSRF Protection** untuk semua form admin
-- ✅ **Rate Limiting Login** (5x attempt → 15m lockout)
-- ✅ **Audit Log** untuk semua aktivitas admin
-- ✅ **HTML Sanitization** dengan HTMLPurifier
-- ✅ **Upload Hardening** (image/video only, MIME validation)
-- ✅ **Session Hardening** (HttpOnly, SameSite, Secure)
-- ✅ **Security Headers** (CSP, X-Frame-Options, dll)
+**DIP**
+- Admin input DIP di `admin/dip/index.php`.
+- DIP publik di `pages/dip.php`.
+- Home menampilkan DIP terbaru maksimum 5 baris.
 
-## Deployment
+**Upload dan File**
+- Folder upload: `uploads/`
+- Upload divalidasi dengan MIME dan ekstensi.
+- File metadata tersimpan di tabel `files`.
 
-Untuk instruksi deployment ke production server, lihat:
-📖 **[Deployment Guide](docs/DEPLOYMENT.md)**
+**Keamanan**
+- CSRF token di admin.
+- Rate limit login.
+- Audit log admin.
+- Security headers (CSP, XFO, HSTS, dll).
+- Sanitasi HTML untuk konten berita.
 
-### Quick Deploy Checklist:
-- [ ] Install SSL certificate (HTTPS wajib)
-- [ ] Update BASE_URL ke HTTPS
-- [ ] Setup backup otomatis
-- [ ] Configure monitoring
-- [ ] Test semua fitur keamanan
+**Deployment Produksi**
+1. Set `BASE_URL` ke domain publik.
+2. Set konfigurasi email SMTP.
+3. Pastikan permission `uploads/` bisa ditulis oleh web server.
+4. Import database ke server.
+5. Aktifkan HTTPS dan validasi CSP jika ada perubahan domain.
+6. Verifikasi semua URL menu.
 
-## License
+**Troubleshooting**
+- Halaman kosong: cek error PHP di server.
+- Upload gagal: cek permission folder `uploads/`.
+- Menu error: cek validasi di admin menu dan URL.
+- Export CSV rusak: pastikan tidak ada warning PHP (disable display_errors di produksi).
 
-Project ini dibuat untuk PPID Kabupaten Dompu.
+**Catatan Serah Terima**
+- Semua CSS/JS sudah digabung di `css/style.css` dan `js/script.js`.
+- Halaman dinamis menggunakan `pages/template.php?slug=...`.
+- DIP dan Keberatan sudah memakai struktur baru.
+

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 08, 2026 at 02:50 PM
+-- Generation Time: Feb 09, 2026 at 03:13 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -70,7 +70,38 @@ INSERT INTO `admin_audit_log` (`id`, `admin_id`, `admin_username`, `action`, `ta
 (23, 6, 'rafi', 'DELETE_MENU', 'menu', 19, 'Deleted menu ID: 19', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-05 20:31:00'),
 (24, 6, 'rafi', 'LOGIN', NULL, NULL, 'Admin login successful for user: rafi', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-05 22:04:35'),
 (25, 6, 'rafi', 'REORDER_MENU', 'menu', NULL, 'Reordered menus', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-05 22:08:58'),
-(26, 6, 'rafi', 'UPDATE_MENU', 'menu', 17, 'Updated menu: PROSEDUR (ID: 17)', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-06 02:21:35');
+(26, 6, 'rafi', 'UPDATE_MENU', 'menu', 17, 'Updated menu: PROSEDUR (ID: 17)', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-06 02:21:35'),
+(27, 6, 'rafi', 'LOGIN', NULL, NULL, 'Admin login successful for user: rafi', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-08 14:06:42'),
+(28, 6, 'rafi', 'CREATE_PAGE', 'page', 2, 'Created page: NEW (slug: new)', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-08 15:19:10'),
+(29, 6, 'rafi', 'DELETE_PAGE', 'page', 1, 'Deleted page ID: 1', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-08 15:19:13'),
+(30, 6, 'rafi', 'UPDATE_MENU', 'menu', 12, 'Updated menu: DIP (ID: 12)', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-08 15:19:21'),
+(31, 6, 'rafi', 'UPDATE_PAGE', 'page', 2, 'Updated page: NEW (ID: 2)', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-08 18:43:34'),
+(32, 6, 'rafi', 'UPDATE_PAGE', 'page', 2, 'Updated page: NEW (ID: 2)', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-08 18:43:39'),
+(33, 6, 'rafi', 'UPDATE_PAGE', 'page', 2, 'Updated page: NEW (ID: 2)', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-08 18:44:07'),
+(34, 6, 'rafi', 'CREATE_PAGE', 'page', 3, 'Created page: a (slug: a)', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-08 18:44:15'),
+(35, 6, 'rafi', 'DELETE_PAGE', 'page', 3, 'Deleted page ID: 3', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-08 18:44:19'),
+(36, 6, 'rafi', 'DELETE_NEWS', 'news', 10, 'Deleted news with ID: 10', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-08 18:47:12'),
+(37, 6, 'rafi', 'DELETE_NEWS', 'news', 9, 'Deleted news with ID: 9', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-08 18:47:16'),
+(38, 6, 'rafi', 'EXPORT_LAPORAN', 'keberatan', NULL, 'Export CSV laporan keberatan', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-08 19:31:53'),
+(39, 6, 'rafi', 'EXPORT_LAPORAN', 'permohonan_informasi', NULL, 'Export CSV laporan permohonan', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-08 19:36:36'),
+(40, 6, 'rafi', 'UPDATE_MENU', 'menu', 12, 'Updated menu: DIP (ID: 12)', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-08 19:42:11'),
+(41, 6, 'rafi', 'UPDATE_MENU', 'menu', 12, 'Updated menu: DIP (ID: 12)', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-08 19:42:15'),
+(42, 6, 'rafi', 'CREATE_PAGE', 'page', 4, 'Created page: b (slug: b)', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-08 19:43:18'),
+(43, 6, 'rafi', 'UPDATE_MENU', 'menu', 12, 'Updated menu: DIP (ID: 12)', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-08 19:43:24'),
+(44, 6, 'rafi', 'UPDATE_MENU', 'menu', 12, 'Updated menu: DIP (ID: 12)', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-08 19:46:32'),
+(45, 6, 'rafi', 'ADD_NEWS', 'news', 11, 'Added new news: tes', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-08 19:59:45'),
+(46, 6, 'rafi', 'UPDATE_MENU', 'menu', 26, 'Updated menu: KONTAK (ID: 26)', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-08 23:21:29'),
+(47, 6, 'rafi', 'CREATE_DIP', 'daftar_informasi_publik', 1, 'Created DIP: add', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 00:51:21'),
+(48, 6, 'rafi', 'DELETE_DIP', 'daftar_informasi_publik', 1, 'Deleted DIP ID: 1', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 00:52:10'),
+(49, 6, 'rafi', 'CREATE_MENU', 'menu', 35, 'Created menu: Daftar Keberatan (ID: 35)', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 01:12:48'),
+(50, 6, 'rafi', 'UPDATE_MENU', 'menu', 35, 'Updated menu: Daftar Keberatan (ID: 35)', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 01:13:46'),
+(51, 6, 'rafi', 'UPDATE_KEBERATAN_STATUS', 'keberatan', 1, 'Update status to: ditolak', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 01:19:33'),
+(52, 6, 'rafi', 'UPDATE_KEBERATAN_STATUS', 'keberatan', 1, 'Update status to: selesai', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 01:19:40'),
+(53, 6, 'rafi', 'EXPORT_LAPORAN', 'permohonan_informasi', NULL, 'Export CSV laporan permohonan', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 01:21:05'),
+(54, 6, 'rafi', 'EXPORT_LAPORAN', 'keberatan', NULL, 'Export CSV laporan keberatan', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 01:23:15'),
+(55, 6, 'rafi', 'EXPORT_LAPORAN', 'permohonan_informasi', NULL, 'Export CSV laporan permohonan', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 01:23:50'),
+(56, 6, 'rafi', 'EXPORT_LAPORAN', 'keberatan', NULL, 'Export CSV laporan keberatan', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 01:24:55'),
+(57, 6, 'rafi', 'EXPORT_LAPORAN', 'keberatan', NULL, 'Export CSV laporan keberatan', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 01:25:22');
 
 -- --------------------------------------------------------
 
@@ -114,12 +145,12 @@ CREATE TABLE `external_websites` (
 --
 
 INSERT INTO `external_websites` (`id`, `name`, `url`, `description`, `image`, `order_index`, `is_active`, `created_at`, `updated_at`) VALUES
-(1, 'Dinas Komunikasi dan Informatika', 'https://kominfo.dompukab.go.id', 'Website resmi Dinas Komunikasi dan Informatika Kabupaten Dompu', 'https://via.placeholder.com/350x200/093A5A/FFFFFF?text=Kominfo', 1, 1, '2026-01-29 07:55:40', '2026-01-29 07:55:40'),
-(2, 'Dinas Pendidikan', 'https://dikbud.dompukab.go.id', 'Website resmi Dinas Pendidikan dan Kebudayaan Kabupaten Dompu', 'https://via.placeholder.com/350x200/093A5A/FFFFFF?text=Dikbud', 2, 1, '2026-01-29 07:55:40', '2026-01-29 07:55:40'),
-(3, 'Dinas Kesehatan', 'https://dinkes.dompukab.go.id', 'Website resmi Dinas Kesehatan Kabupaten Dompu', 'https://via.placeholder.com/350x200/093A5A/FFFFFF?text=Dinkes', 3, 1, '2026-01-29 07:55:40', '2026-01-29 07:55:40'),
-(4, 'Dinas Sosial', 'https://dinsos.dompukab.go.id', 'Website resmi Dinas Sosial Kabupaten Dompu', 'https://via.placeholder.com/350x200/093A5A/FFFFFF?text=Dinsos', 4, 1, '2026-01-29 07:55:40', '2026-01-29 07:55:40'),
-(5, 'Dinas PU', 'https://pu.dompukab.go.id', 'Website resmi Dinas Pekerjaan Umum Kabupaten Dompu', 'https://via.placeholder.com/350x200/093A5A/FFFFFF?text=PU', 5, 1, '2026-01-29 07:55:40', '2026-01-29 07:55:40'),
-(6, 'Dinas Perhubungan', 'https://dishub.dompukab.go.id', 'Website resmi Dinas Perhubungan Kabupaten Dompu', 'https://via.placeholder.com/350x200/093A5A/FFFFFF?text=Dishub', 6, 1, '2026-01-29 07:55:40', '2026-01-29 07:55:40');
+(7, 'Website Kabupaten Dompu', 'https://dompukab.go.id', 'Portal resmi Kabupaten Dompu', 'img/website-kabupaten-dompu.jpg', 1, 1, '2026-02-08 23:45:15', '2026-02-08 23:45:15'),
+(8, 'SP4N LAPOR!', 'https://www.lapor.go.id', 'Layanan aspirasi dan pengaduan online', 'img/sp4n-lapor.jpg', 2, 1, '2026-02-08 23:45:15', '2026-02-08 23:45:15'),
+(9, 'Satu Data Dompu', 'https://satudata.dompukab.go.id', 'Portal data terpadu Kabupaten Dompu', 'img/satu-data-dompu.jpg', 3, 1, '2026-02-08 23:45:15', '2026-02-08 23:45:15'),
+(10, 'SIRUP', 'https://sirup.lkpp.go.id', 'Sistem Informasi Rencana Umum Pengadaan', 'img/sirup.jpg', 4, 1, '2026-02-08 23:45:15', '2026-02-08 23:45:15'),
+(11, 'BPS Dompu', 'https://dompukab.bps.go.id', 'Badan Pusat Statistik Kabupaten Dompu', 'img/bps-dompu.jpg', 5, 1, '2026-02-08 23:45:15', '2026-02-08 23:45:15'),
+(12, 'E-SAKIP', 'https://esakip.dompukab.go.id', 'Sistem Akuntabilitas Kinerja Instansi Pemerintah', 'img/e-sakip.jpg', 6, 1, '2026-02-08 23:45:15', '2026-02-08 23:45:15');
 
 -- --------------------------------------------------------
 
@@ -136,6 +167,13 @@ CREATE TABLE `files` (
   `uploaded_by` int(11) DEFAULT NULL,
   `uploaded_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `files`
+--
+
+INSERT INTO `files` (`id`, `nama_file`, `path`, `tipe_file`, `ukuran`, `uploaded_by`, `uploaded_at`) VALUES
+(1, 'White Tosca Orange Simple Professional Annual Report.pdf', 'uploads/White_Tosca_Orange_Simple_Professional_Annual_Report_2026-02-09_01-51-21_347d8822.pdf', 'pdf', 466544, 6, '2026-02-09 00:51:21');
 
 -- --------------------------------------------------------
 
@@ -189,20 +227,12 @@ CREATE TABLE `keberatan` (
   `tanggal_putusan` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `log_status_permohonan`
+-- Dumping data for table `keberatan`
 --
 
-CREATE TABLE `log_status_permohonan` (
-  `id` int(11) NOT NULL,
-  `permohonan_id` int(11) NOT NULL,
-  `status_lama` varchar(30) DEFAULT NULL,
-  `status_baru` varchar(30) NOT NULL,
-  `diubah_oleh` int(11) DEFAULT NULL,
-  `waktu` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `keberatan` (`id`, `nomor_registrasi`, `nama_lengkap`, `identitas`, `no_identitas`, `scan_identitas`, `informasi_diminta`, `alasan_pengajuan`, `keterangan_tambahan`, `status`, `putusan`, `tanggal_pengajuan`, `tanggal_putusan`) VALUES
+(1, 'KBR-20260209-0001', 'rafi', 'KTP', '123456', 'uploads/talk_2026-02-09_02-14-47_7df3a3d0.png', 'KUHP', 'Permohonan Informasi Di Tolak', 'sudah lewat 13 hari', 'selesai', NULL, '2026-02-09 01:14:47', NULL);
 
 -- --------------------------------------------------------
 
@@ -213,6 +243,30 @@ CREATE TABLE `log_status_permohonan` (
 CREATE TABLE `log_status_keberatan` (
   `id` int(11) NOT NULL,
   `keberatan_id` int(11) NOT NULL,
+  `status_lama` varchar(30) DEFAULT NULL,
+  `status_baru` varchar(30) NOT NULL,
+  `diubah_oleh` int(11) DEFAULT NULL,
+  `waktu` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `log_status_keberatan`
+--
+
+INSERT INTO `log_status_keberatan` (`id`, `keberatan_id`, `status_lama`, `status_baru`, `diubah_oleh`, `waktu`) VALUES
+(1, 1, NULL, 'diajukan', NULL, '2026-02-09 01:14:47'),
+(2, 1, 'diajukan', 'ditolak', 6, '2026-02-09 01:19:33'),
+(3, 1, 'ditolak', 'selesai', 6, '2026-02-09 01:19:40');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `log_status_permohonan`
+--
+
+CREATE TABLE `log_status_permohonan` (
+  `id` int(11) NOT NULL,
+  `permohonan_id` int(11) NOT NULL,
   `status_lama` varchar(30) DEFAULT NULL,
   `status_baru` varchar(30) NOT NULL,
   `diubah_oleh` int(11) DEFAULT NULL,
@@ -273,7 +327,7 @@ INSERT INTO `menus` (`id`, `name`, `url`, `parent_id`, `order_index`, `is_active
 (8, 'Pengajuan Keberatan', 'pages/pengajuan-keberatan.php', 3, 8, 1, '2026-01-29 07:55:40', '2026-02-05 22:08:58'),
 (9, 'Pengaduan Nomor', 'pages/pengaduan-nomor.php', 3, 9, 1, '2026-01-29 07:55:40', '2026-02-05 22:08:58'),
 (10, 'Pengaduan Konten', 'pages/pengaduan-konten.php', 3, 10, 1, '2026-01-29 07:55:40', '2026-02-05 22:08:58'),
-(12, 'DIP', 'pages/dip.php', 0, 2, 1, '2026-01-29 08:01:15', '2026-02-05 22:08:58'),
+(12, 'DIP', '/pages/dip.php', 0, 2, 1, '2026-01-29 08:01:15', '2026-02-08 19:46:32'),
 (14, 'Visi Misi', 'pages/profil.php', 29, 1, 1, '2026-01-29 08:01:15', '2026-01-29 17:13:08'),
 (15, 'Struktur Organisasi', 'pages/struktur.php', 29, 2, 1, '2026-01-29 08:01:15', '2026-01-29 17:13:02'),
 (16, 'Tugas dan Fungsi', 'pages/tugas.php', 29, 3, 1, '2026-01-29 08:01:15', '2026-01-29 17:13:17'),
@@ -284,10 +338,11 @@ INSERT INTO `menus` (`id`, `name`, `url`, `parent_id`, `order_index`, `is_active
 (23, 'SKM', 'pages/skm.php', 0, 17, 1, '2026-01-29 08:01:15', '2026-02-05 22:08:58'),
 (24, 'FKP', 'pages/fkp.php', 0, 18, 1, '2026-01-29 08:01:15', '2026-02-05 22:08:58'),
 (25, 'SP', 'pages/sp.php', 0, 19, 1, '2026-01-29 08:01:15', '2026-02-05 22:08:58'),
-(26, 'KONTAK', 'pages/kontak.php', 0, 20, 1, '2026-01-29 08:01:15', '2026-02-05 22:08:58'),
+(26, 'KONTAK', 'pages/template.php?slug=new', 0, 20, 1, '2026-01-29 08:01:15', '2026-02-08 23:21:29'),
 (28, 'BERANDA', 'index.php', 0, 1, 1, '2026-01-29 08:03:39', '2026-02-05 22:08:58'),
 (29, 'PROFIL PPID', '#', 2, 4, 1, '2026-01-29 08:03:39', '2026-02-05 22:08:58'),
-(33, 'Daftar Permohonan', 'pages/daftar-permohonan-publik.php', 4, 12, 1, '2026-02-02 02:23:15', '2026-02-05 22:08:58');
+(33, 'Daftar Permohonan', 'pages/daftar-permohonan-publik.php', 4, 12, 1, '2026-02-02 02:23:15', '2026-02-05 22:08:58'),
+(35, 'Daftar Keberatan', '/pages/daftar-keberatan-publik.php', 4, 13, 1, '2026-02-09 01:12:48', '2026-02-09 01:13:46');
 
 -- --------------------------------------------------------
 
@@ -321,8 +376,7 @@ INSERT INTO `news` (`id`, `title`, `kategori`, `slug`, `excerpt`, `content`, `im
 (6, 'PPID Kabupaten Dompu Luncurkan Layanan Informasi Digital', '', 'ppid-kabupaten-dompu-luncurkan-layanan-informasi-digital', 'PPID Kabupaten Dompu secara resmi meluncurkan layanan informasi digital...', 'PPID Kabupaten Dompu secara resmi meluncurkan layanan informasi digital untuk memudahkan masyarakat dalam mengakses informasi publik.', NULL, 'published', '2026-01-29 08:03:39', '2026-01-29 08:03:39'),
 (7, 'Sosialisasi Keterbukaan Informasi Publik', 'berita', 'sosialisasi-keterbukaan-informasi-publik', 'PPID Kabupaten Dompu mengadakan sosialisasi keterbukaan informasi publik....', 'PPID Kabupaten Dompu mengadakan sosialisasi keterbukaan informasi publik.', '', 'published', '2026-01-29 08:03:39', '2026-01-31 16:35:39'),
 (8, 'TES BERITA BARU', 'berita', 'tes-berita-baru', 'Dompu - lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lor...', 'Dompu - lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametv lorem ipsum dolor sit amet', '1769790152_01KF0851YRGQNHH7VB6NDYS0TM.jpg', 'published', '2026-01-30 16:22:32', '2026-01-31 12:50:24'),
-(9, 'Bencana aalam', 'berita', 'bencana-aalam', 'Judul Aman\r\n\r\n\r\n  Ini paragraf dengan bold dan italic.\r\n\r\n\r\n\r\n\r\nKlik saya\r\n\r\nalert(\'XSS script\')\r\n\r\n\r\n  body { background: red; }\r\n\r\n\r\n\r\n...', '<h1>Judul Aman</h1>\r\n\r\n<p onclick=\"alert(\'XSS\')\">\r\n  Ini paragraf dengan <b>bold</b> dan <i>italic</i>.\r\n</p>\r\n\r\n\r\n\r\n<a href=\"javascript:alert(\'XSS dari link\')\">Klik saya</a>\r\n\r\nalert(\'XSS script\')\r\n\r\n\r\n  body { background: red; }\r\n\r\n\r\n\r\n', '1769849800_WhatsApp Image 2026-01-25 at 5.21.47 AM.jpeg', 'published', '2026-01-31 08:56:40', '2026-02-01 02:33:33'),
-(10, 'HTML', 'TES', 'html', 'Judul Aman\r\n\r\n...', '<h1>Judul Aman</h1>\r\n\r\n', '', 'published', '2026-02-01 02:37:10', '2026-02-03 11:49:33');
+(11, 'tes', 'berita', 'tes', 'asdfghjkl...', 'asdfghjkl', '', 'published', '2026-02-08 19:59:45', '2026-02-08 19:59:45');
 
 -- --------------------------------------------------------
 
@@ -344,7 +398,8 @@ CREATE TABLE `pages` (
 --
 
 INSERT INTO `pages` (`id`, `title`, `slug`, `content`, `created_at`, `updated_at`) VALUES
-(1, 'Tes', 'tes', '1234asdf', '2026-02-05 19:20:42', '2026-02-05 19:20:53');
+(2, 'NEW', 'new', '', '2026-02-08 15:19:10', '2026-02-08 18:44:07'),
+(4, 'b', 'b', '', '2026-02-08 19:43:18', '2026-02-08 19:43:18');
 
 -- --------------------------------------------------------
 
@@ -355,10 +410,19 @@ INSERT INTO `pages` (`id`, `title`, `slug`, `content`, `created_at`, `updated_at
 CREATE TABLE `page_blocks` (
   `id` int(11) NOT NULL,
   `page_id` int(11) NOT NULL,
-  `type` enum('text','table','file','link','image') NOT NULL,
+  `type` enum('text','table','file','link') NOT NULL,
   `position` int(11) NOT NULL DEFAULT 0,
   `created_at` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `page_blocks`
+--
+
+INSERT INTO `page_blocks` (`id`, `page_id`, `type`, `position`, `created_at`) VALUES
+(7, 2, 'text', 0, '2026-02-09 02:44:07'),
+(8, 2, 'table', 1, '2026-02-09 02:44:07'),
+(11, 4, 'text', 0, '2026-02-09 03:43:18');
 
 -- --------------------------------------------------------
 
@@ -412,6 +476,13 @@ CREATE TABLE `page_table_blocks` (
   `enable_sort` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `page_table_blocks`
+--
+
+INSERT INTO `page_table_blocks` (`block_id`, `enable_search`, `enable_sort`) VALUES
+(8, 1, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -423,6 +494,16 @@ CREATE TABLE `page_table_cells` (
   `column_id` int(11) NOT NULL,
   `cell_value` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `page_table_cells`
+--
+
+INSERT INTO `page_table_cells` (`row_id`, `column_id`, `cell_value`) VALUES
+(9, 9, '1'),
+(9, 10, 'SAO'),
+(10, 9, '2'),
+(10, 10, 'MHA');
 
 -- --------------------------------------------------------
 
@@ -437,6 +518,14 @@ CREATE TABLE `page_table_columns` (
   `column_order` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `page_table_columns`
+--
+
+INSERT INTO `page_table_columns` (`id`, `table_block_id`, `header_name`, `column_order`) VALUES
+(9, 8, 'No', 0),
+(10, 8, 'JUDUL', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -449,6 +538,14 @@ CREATE TABLE `page_table_rows` (
   `row_order` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `page_table_rows`
+--
+
+INSERT INTO `page_table_rows` (`id`, `table_block_id`, `row_order`) VALUES
+(9, 8, 0),
+(10, 8, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -459,6 +556,14 @@ CREATE TABLE `page_text_blocks` (
   `block_id` int(11) NOT NULL,
   `content` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `page_text_blocks`
+--
+
+INSERT INTO `page_text_blocks` (`block_id`, `content`) VALUES
+(7, 'INI adalah Tabel'),
+(11, 'b');
 
 -- --------------------------------------------------------
 
@@ -473,16 +578,9 @@ CREATE TABLE `permohonan_informasi` (
   `email` varchar(100) NOT NULL,
   `no_hp` varchar(20) DEFAULT NULL,
   `alamat` text DEFAULT NULL,
-  `pekerjaan` varchar(100) DEFAULT NULL,
-  `jenis_identitas` varchar(50) DEFAULT NULL,
-  `nomor_identitas` varchar(100) DEFAULT NULL,
-  `scan_identitas` varchar(255) DEFAULT NULL,
-  `tujuan_perangkat` varchar(150) DEFAULT NULL,
   `informasi_diminta` text NOT NULL,
   `tujuan_penggunaan` text DEFAULT NULL,
-  `cara_mendapatkan` text DEFAULT NULL,
-  `cara_pengambilan` varchar(100) DEFAULT NULL,
-  `cara_memperoleh` enum('Langsung di Kantor PPID','Melalui Email','Melalui Pos','Kurir') NOT NULL,
+  `cara_memperoleh` enum('melihat','salinan','softcopy') NOT NULL,
   `status` enum('diajukan','diproses','ditolak','selesai') DEFAULT 'diajukan',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -627,20 +725,20 @@ ALTER TABLE `keberatan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `log_status_permohonan`
---
-ALTER TABLE `log_status_permohonan`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_log_permohonan` (`permohonan_id`),
-  ADD KEY `fk_log_user` (`diubah_oleh`);
-
---
 -- Indexes for table `log_status_keberatan`
 --
 ALTER TABLE `log_status_keberatan`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_log_keberatan` (`keberatan_id`),
   ADD KEY `fk_log_keberatan_user` (`diubah_oleh`);
+
+--
+-- Indexes for table `log_status_permohonan`
+--
+ALTER TABLE `log_status_permohonan`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_log_permohonan` (`permohonan_id`),
+  ADD KEY `fk_log_user` (`diubah_oleh`);
 
 --
 -- Indexes for table `menus`
@@ -756,25 +854,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `admin_audit_log`
 --
 ALTER TABLE `admin_audit_log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `daftar_informasi_publik`
 --
 ALTER TABLE `daftar_informasi_publik`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `external_websites`
 --
 ALTER TABLE `external_websites`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `files`
 --
 ALTER TABLE `files`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `informasi_lampiran`
@@ -792,7 +890,13 @@ ALTER TABLE `jawaban_permohonan`
 -- AUTO_INCREMENT for table `keberatan`
 --
 ALTER TABLE `keberatan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `log_status_keberatan`
+--
+ALTER TABLE `log_status_keberatan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `log_status_permohonan`
@@ -801,34 +905,28 @@ ALTER TABLE `log_status_permohonan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT for table `log_status_keberatan`
---
-ALTER TABLE `log_status_keberatan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `menus`
 --
 ALTER TABLE `menus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `pages`
 --
 ALTER TABLE `pages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `page_blocks`
 --
 ALTER TABLE `page_blocks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `page_image_blocks`
@@ -840,13 +938,13 @@ ALTER TABLE `page_image_blocks`
 -- AUTO_INCREMENT for table `page_table_columns`
 --
 ALTER TABLE `page_table_columns`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `page_table_rows`
 --
 ALTER TABLE `page_table_rows`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `permohonan_informasi`
@@ -903,18 +1001,18 @@ ALTER TABLE `jawaban_permohonan`
   ADD CONSTRAINT `fk_jawaban_user` FOREIGN KEY (`dijawab_oleh`) REFERENCES `users` (`id`) ON DELETE SET NULL;
 
 --
--- Constraints for table `log_status_permohonan`
---
-ALTER TABLE `log_status_permohonan`
-  ADD CONSTRAINT `fk_log_permohonan` FOREIGN KEY (`permohonan_id`) REFERENCES `permohonan_informasi` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `fk_log_user` FOREIGN KEY (`diubah_oleh`) REFERENCES `users` (`id`) ON DELETE SET NULL;
-
---
 -- Constraints for table `log_status_keberatan`
 --
 ALTER TABLE `log_status_keberatan`
   ADD CONSTRAINT `fk_log_keberatan` FOREIGN KEY (`keberatan_id`) REFERENCES `keberatan` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `fk_log_keberatan_user` FOREIGN KEY (`diubah_oleh`) REFERENCES `users` (`id`) ON DELETE SET NULL;
+
+--
+-- Constraints for table `log_status_permohonan`
+--
+ALTER TABLE `log_status_permohonan`
+  ADD CONSTRAINT `fk_log_permohonan` FOREIGN KEY (`permohonan_id`) REFERENCES `permohonan_informasi` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `fk_log_user` FOREIGN KEY (`diubah_oleh`) REFERENCES `users` (`id`) ON DELETE SET NULL;
 
 --
 -- Constraints for table `page_blocks`
