@@ -31,6 +31,7 @@ $pages = $conn->query("SELECT id, title, slug, created_at, updated_at FROM pages
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="<?php echo buildUrl('img/Kabupaten Dompu.png'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelola Halaman - PPID Admin</title>
     <link rel="stylesheet" href="../../css/style.css">
@@ -137,3 +138,6 @@ $pages = $conn->query("SELECT id, title, slug, created_at, updated_at FROM pages
     <script src="../../js/script.js"></script>
 </body>
 </html>
+
+
+

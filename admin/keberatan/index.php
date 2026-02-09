@@ -42,6 +42,7 @@ $errorMessage = isset($_GET['error']) ? htmlspecialchars($_GET['error']) : '';
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="<?php echo buildUrl('img/Kabupaten Dompu.png'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Keberatan - Admin PPID</title>
     <link rel="stylesheet" href="../../css/style.css">
@@ -282,3 +283,6 @@ $errorMessage = isset($_GET['error']) ? htmlspecialchars($_GET['error']) : '';
     <script src='../../js/script.js'></script>
 </body>
 </html>
+
+
+

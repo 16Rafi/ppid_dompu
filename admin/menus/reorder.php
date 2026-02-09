@@ -63,7 +63,7 @@ try {
     foreach ($data['menus'] as $index => $menu_data) {
         $menu_id = (int)$menu_data['id'];
         $parent_id = isset($menu_data['parent']) ? (int)$menu_data['parent'] : 0;
-        $order_index = $index + 1;
+        $order_index = isset($menu_data['order']) ? (int)$menu_data['order'] : ($index + 1);
         
         // Validate menu exists
         $stmt = $conn->prepare("SELECT id FROM menus WHERE id = ?");

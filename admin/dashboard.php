@@ -85,6 +85,7 @@ $recent_pages = safeRecent($conn, 'pages', 5);
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="<?php echo buildUrl('img/Kabupaten Dompu.png'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Admin - PPID Kabupaten Dompu</title>
     <link rel="stylesheet" href="../css/style.css">
@@ -285,4 +286,7 @@ $recent_pages = safeRecent($conn, 'pages', 5);
     <script src='../js/script.js'></script>
 </body>
 </html>
+
+
+
 

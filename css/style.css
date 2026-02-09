@@ -128,7 +128,7 @@ body {
     margin-top: 0.5rem;
 }
 
-.nav-item:hover .dropdown-menu {
+.nav-item:hover > .dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -136,6 +136,28 @@ body {
 
 .dropdown-menu li {
     list-style: none;
+    position: relative;
+}
+
+.dropdown-menu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: 0;
+    margin-left: 0.5rem;
+    transform: translateX(-10px);
+}
+
+.dropdown-menu li:hover > .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.dropdown-menu .dropdown-toggle::after {
+    content: '▶';
+    margin-left: auto;
+    font-size: 0.7rem;
+    transform: none;
 }
 
 .dropdown-link {
@@ -1589,7 +1611,7 @@ section {
 /* Template page */
 .page-content .page-header {
     margin-bottom: 3rem;
-    text-align: center;
+    text-align: left;
 }
 
 .page-content .page-header h1 {
@@ -1602,7 +1624,7 @@ section {
 .page-content .breadcrumb {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 0.5rem;
     font-size: 0.9rem;
     color: #7392A8;
@@ -1684,6 +1706,7 @@ body.daftar-permohonan-body {
 
 body.daftar-permohonan-body main.daftar-page {
     flex: 1;
+    padding-top: 110px;
 }
 
 body.daftar-permohonan-body footer.footer {
@@ -4257,18 +4280,18 @@ body.daftar-permohonan-body footer.footer {
 /* Satu Data Dompu */
 .satudata-dompu-section {
     background: linear-gradient(180deg, #0A58CAff, #0A58CAff);
-    padding: 10px 20px;
+    padding: 24px 20px 28px;
     color: #ffffff;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .satudata-dompu-header {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
 }
 
 .satudata-dompu-header img {
-    max-width: 90px;
+    max-width: 80px;
 }
 
 .satudata-dompu-header h2 {
@@ -4279,14 +4302,14 @@ body.daftar-permohonan-body footer.footer {
 }
 
 .satudata-dompu-slider {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .satudata-dompu-slides {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 14px;
 }
 
 .satudata-dompu-slide {
@@ -4297,32 +4320,54 @@ body.daftar-permohonan-body footer.footer {
     background: #ffffff;
     color: #0b2f4a;
     border-radius: 12px;
-    padding: 12px 12px;
+    padding: 18px 12px;
     text-align: center;
     text-decoration: none;
     box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .satudata-dompu-card-icon {
-    font-size: 26px;
-    margin-bottom: 8px;
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
 .satudata-dompu-card-title {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 1.4;
 }
 
+.satudata-dompu-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
 .satudata-dompu-footer {
     text-align: center;
-    margin-top: 2px;
+    margin-top: 8px;
 }
 
 .satudata-dompu-footer a {
     color: #ffffff;
     font-weight: 600;
     text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+    .satudata-dompu-slides {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .satudata-dompu-slides {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 /* DIP Terbaru */

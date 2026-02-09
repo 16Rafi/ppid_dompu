@@ -51,6 +51,7 @@ $dipList = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="<?php echo buildUrl('img/Kabupaten Dompu.png'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelola DIP - Admin PPID</title>
     <link rel="stylesheet" href="../../css/style.css">
@@ -260,3 +261,6 @@ $dipList = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
     <script src="../../js/script.js"></script>
 </body>
 </html>
+
+
+

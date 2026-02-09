@@ -16,6 +16,7 @@ if (empty($_SESSION['csrf_token'])) {
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="<?php echo buildUrl('img/Kabupaten Dompu.png'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Halaman - PPID Admin</title>
     <meta name="csrf-token" content="<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>">
@@ -104,3 +105,6 @@ if (empty($_SESSION['csrf_token'])) {
     <script src="../../js/script.js"></script>
 </body>
 </html>
+
+
+

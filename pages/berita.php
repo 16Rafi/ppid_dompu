@@ -168,61 +168,13 @@ $news_result = $conn->query($news_query);
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="<?php echo buildUrl('img/Kabupaten Dompu.png'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Berita - PPID Kabupaten Dompu</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <div class="logo-img">PPID</div>
-                    <h2>PPID</h2>
-                </div>
-                <nav class="nav-menu">
-                    <ul class="nav-list">
-                        <?php
-                        $menu_query = "SELECT * FROM menus WHERE parent_id = 0 AND is_active = 1 ORDER BY order_index";
-                        $menu_result = $conn->query($menu_query);
-                        
-                        while ($menu = $menu_result->fetch_assoc()) {
-                            $has_children = false;
-                            $children_query = "SELECT * FROM menus WHERE parent_id = ? AND is_active = 1 ORDER BY order_index";
-                            $children_stmt = $conn->prepare($children_query);
-                            $children_stmt->bind_param("i", $menu['id']);
-                            $children_stmt->execute();
-                            $children_result = $children_stmt->get_result();
-                            
-                            if ($children_result->num_rows > 0) {
-                                $has_children = true;
-                            }
-                            
-                            echo '<li class="nav-item">';
-                            if ($has_children) {
-                                echo '<a href="' . buildUrl($menu['url']) . '" class="nav-link dropdown-toggle">' . htmlspecialchars($menu['name']) . '</a>';
-                                echo '<ul class="dropdown-menu">';
-                                while ($child = $children_result->fetch_assoc()) {
-                                    echo '<li><a href="' . buildUrl($child['url']) . '" class="dropdown-link">' . htmlspecialchars($child['name']) . '</a></li>';
-                                }
-                                echo '</ul>';
-                            } else {
-                                echo '<a href="' . buildUrl($menu['url']) . '" class="nav-link">' . htmlspecialchars($menu['name']) . '</a>';
-                            }
-                            echo '</li>';
-                        }
-                        ?>
-                    </ul>
-                </nav>
-                <div class="mobile-menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-    </header>
+    <?php include '../includes/header.php'; ?>
 
     <div class="berita-page">
         <div class="berita-header">
@@ -414,29 +366,9 @@ $news_result = $conn->query($news_query);
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>PPID Kabupaten Dompu</h3>
-                    <p>Pejabat Pengelola Informasi dan Dokumentasi Kabupaten Dompu</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Kontak</h4>
-                    <p>Email: ppid@dompukab.go.id</p>
-                    <p>Telepon: (0371) 123456</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Alamat</h4>
-                    <p>Jl. Soekarno Hatta No. 1<br>Kecamatan Dompu<br>Kabupaten Dompu</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; <?php echo date('Y'); ?> PPID Kabupaten Dompu. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="../js/script.js"></script>
+    <?php include '../includes/footer.php'; ?>
 </body>
 </html>
+
+
+

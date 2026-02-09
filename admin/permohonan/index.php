@@ -52,6 +52,7 @@ $errorMessage = isset($_GET['error']) ? htmlspecialchars($_GET['error']) : '';
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="<?php echo buildUrl('img/Kabupaten Dompu.png'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Permohonan - Admin PPID</title>
     <link rel="stylesheet" href="../../css/style.css">
@@ -209,7 +210,11 @@ $errorMessage = isset($_GET['error']) ? htmlspecialchars($_GET['error']) : '';
                                             <button class="btn-small btn-detail" onclick="showDetail(<?php echo $permohonan['id']; ?>)">
                                                 Detail
                                             </button>
-                                            <button class="btn-small btn-status" onclick="showStatusModal(<?php echo $permohonan['id']; ?>, JSON.parse('<?php echo json_encode($permohonan['status']); ?>'))">
+                                            <button
+                                                class="btn-small btn-status js-status-permohonan"
+                                                data-id="<?php echo (int)$permohonan['id']; ?>"
+                                                data-status="<?php echo htmlspecialchars($permohonan['status'], ENT_QUOTES, 'UTF-8'); ?>"
+                                            >
                                                 Ubah Status
                                             </button>
                                         </div>
@@ -303,3 +308,6 @@ $errorMessage = isset($_GET['error']) ? htmlspecialchars($_GET['error']) : '';
     <script src='../../js/script.js'></script>
 </body>
 </html>
+
+
+
