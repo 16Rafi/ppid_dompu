@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 09, 2026 at 03:13 AM
+-- Generation Time: Feb 10, 2026 at 02:39 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -101,7 +101,22 @@ INSERT INTO `admin_audit_log` (`id`, `admin_id`, `admin_username`, `action`, `ta
 (54, 6, 'rafi', 'EXPORT_LAPORAN', 'keberatan', NULL, 'Export CSV laporan keberatan', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 01:23:15'),
 (55, 6, 'rafi', 'EXPORT_LAPORAN', 'permohonan_informasi', NULL, 'Export CSV laporan permohonan', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 01:23:50'),
 (56, 6, 'rafi', 'EXPORT_LAPORAN', 'keberatan', NULL, 'Export CSV laporan keberatan', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 01:24:55'),
-(57, 6, 'rafi', 'EXPORT_LAPORAN', 'keberatan', NULL, 'Export CSV laporan keberatan', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 01:25:22');
+(57, 6, 'rafi', 'EXPORT_LAPORAN', 'keberatan', NULL, 'Export CSV laporan keberatan', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 01:25:22'),
+(58, 6, 'rafi', 'LOGIN', NULL, NULL, 'Admin login successful for user: rafi', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 02:53:38'),
+(59, 6, 'rafi', 'CREATE_MENU', 'menu', 36, 'Created menu: PROFIL PPID (ID: 36)', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 02:55:17'),
+(60, 6, 'rafi', 'UPDATE_MENU', 'menu', 36, 'Updated menu: PROFIL PPID (ID: 36)', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 03:00:30'),
+(61, 6, 'rafi', 'UPDATE_MENU', 'menu', 36, 'Updated menu: PROFIL Daerah (ID: 36)', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 03:31:45'),
+(62, 6, 'rafi', 'CREATE_MENU', 'menu', 37, 'Created menu: Visi Misi (ID: 37)', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 03:34:01'),
+(63, 6, 'rafi', 'UPDATE_NEWS', 'news', 8, 'Updated news: TES BERITA BARU', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 04:24:34'),
+(64, 6, 'rafi', 'UPDATE_NEWS', 'news', 2, 'Updated news: Hari Pertama Bertugas Kadis Kominfo Dompu Sampaikan Terima Kasih', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 04:25:35'),
+(65, 6, 'rafi', 'LOGIN', NULL, NULL, 'Admin login successful for user: rafi', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 05:29:52'),
+(66, 6, 'rafi', 'UPDATE_PERMOHONAN_STATUS', 'permohonan_informasi', 16, 'Update status to: diproses', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 05:41:11'),
+(67, 6, 'rafi', 'LOGIN', NULL, NULL, 'Admin login successful for user: rafi', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 07:41:44'),
+(68, 6, 'rafi', 'UPDATE_PERMOHONAN_STATUS', 'permohonan_informasi', 15, 'Update status to: diproses', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 07:44:22'),
+(69, 6, 'rafi', 'UPDATE_PERMOHONAN_STATUS', 'permohonan_informasi', 15, 'Update status to: ditolak', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-09 07:44:32'),
+(70, 6, 'rafi', 'LOGIN', NULL, NULL, 'Admin login successful for user: rafi', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-10 01:11:30'),
+(71, 6, 'rafi', 'UPDATE_NEWS', 'news', 11, 'Updated news: tes', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-10 01:25:57'),
+(72, 6, 'rafi', 'UPDATE_NEWS', 'news', 2, 'Updated news: Hari Pertama Bertugas Kadis Kominfo Dompu Sampaikan Terima Kasih', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', '2026-02-10 01:26:19');
 
 -- --------------------------------------------------------
 
@@ -121,6 +136,22 @@ CREATE TABLE `daftar_informasi_publik` (
   `created_by` int(11) DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `daftar_informasi_publik`
+--
+
+INSERT INTO `daftar_informasi_publik` (`id`, `judul`, `ringkasan`, `kategori`, `tahun`, `file_id`, `status_publikasi`, `created_at`, `created_by`, `updated_at`) VALUES
+(2, 'Profil PPID Kabupaten Dompu 2024', 'Ringkasan profil PPID Kabupaten Dompu tahun 2024.', 'berkala', '2024', NULL, 'published', '2026-02-10 01:29:28', NULL, '2026-02-10 01:29:28'),
+(3, 'Daftar Informasi Publik Berkala 2024', 'Daftar informasi publik yang dipublikasikan secara berkala.', 'berkala', '2024', NULL, 'published', '2026-02-10 01:29:28', NULL, '2026-02-10 01:29:28'),
+(4, 'Laporan Kinerja PPID 2023', 'Rekap kinerja layanan informasi publik tahun 2023.', 'berkala', '2023', NULL, 'published', '2026-02-10 01:29:28', NULL, '2026-02-10 01:29:28'),
+(5, 'Standar Layanan Informasi Publik', 'Standar operasional pelayanan informasi publik.', 'setiap-saat', '2022', NULL, 'published', '2026-02-10 01:29:28', NULL, '2026-02-10 01:29:28'),
+(6, 'Rencana Kerja dan Anggaran 2024', 'Ringkasan RKA tahun 2024.', 'setiap-saat', '2024', NULL, 'published', '2026-02-10 01:29:28', NULL, '2026-02-10 01:29:28'),
+(7, 'Informasi Pengadaan Barang/Jasa 2024', 'Ringkasan pengadaan barang/jasa pemerintah.', 'setiap-saat', '2024', NULL, 'published', '2026-02-10 01:29:28', NULL, '2026-02-10 01:29:28'),
+(8, 'Prosedur Penanganan Keberatan', 'Dokumen prosedur pengajuan keberatan.', 'setiap-saat', '2021', NULL, 'published', '2026-02-10 01:29:28', NULL, '2026-02-10 01:29:28'),
+(9, 'Informasi Kebencanaan Terkini', 'Pengumuman kebencanaan dan penanganan darurat.', 'serta-merta', '2024', NULL, 'published', '2026-02-10 01:29:28', NULL, '2026-02-10 01:29:28'),
+(10, 'Status Darurat Bencana Lokal', 'Informasi status darurat di wilayah Dompu.', 'serta-merta', '2023', NULL, 'published', '2026-02-10 01:29:28', NULL, '2026-02-10 01:29:28'),
+(11, 'Pengumuman Penting Layanan Publik', 'Informasi penting layanan publik yang harus segera diketahui.', 'serta-merta', '2024', NULL, 'published', '2026-02-10 01:29:28', NULL, '2026-02-10 01:29:28');
 
 -- --------------------------------------------------------
 
@@ -232,7 +263,8 @@ CREATE TABLE `keberatan` (
 --
 
 INSERT INTO `keberatan` (`id`, `nomor_registrasi`, `nama_lengkap`, `identitas`, `no_identitas`, `scan_identitas`, `informasi_diminta`, `alasan_pengajuan`, `keterangan_tambahan`, `status`, `putusan`, `tanggal_pengajuan`, `tanggal_putusan`) VALUES
-(1, 'KBR-20260209-0001', 'rafi', 'KTP', '123456', 'uploads/talk_2026-02-09_02-14-47_7df3a3d0.png', 'KUHP', 'Permohonan Informasi Di Tolak', 'sudah lewat 13 hari', 'selesai', NULL, '2026-02-09 01:14:47', NULL);
+(1, 'KBR-20260209-0001', 'rafi', 'KTP', '123456', 'uploads/talk_2026-02-09_02-14-47_7df3a3d0.png', 'KUHP', 'Permohonan Informasi Di Tolak', 'sudah lewat 13 hari', 'selesai', NULL, '2026-02-09 01:14:47', NULL),
+(2, 'KBR-20260209-0002', 'rafi', 'KTP', '123456', 'uploads/Kabupaten_Dompu_2026-02-09_08-52-34_4e545a8e.png', 'DPA', 'Informasi Disampaikan Melebihi Jangka Waktu Yang Ditentukan', 'Informasi yang diminta melebihi batas waktu', 'diajukan', NULL, '2026-02-09 07:52:34', NULL);
 
 -- --------------------------------------------------------
 
@@ -256,7 +288,8 @@ CREATE TABLE `log_status_keberatan` (
 INSERT INTO `log_status_keberatan` (`id`, `keberatan_id`, `status_lama`, `status_baru`, `diubah_oleh`, `waktu`) VALUES
 (1, 1, NULL, 'diajukan', NULL, '2026-02-09 01:14:47'),
 (2, 1, 'diajukan', 'ditolak', 6, '2026-02-09 01:19:33'),
-(3, 1, 'ditolak', 'selesai', 6, '2026-02-09 01:19:40');
+(3, 1, 'ditolak', 'selesai', 6, '2026-02-09 01:19:40'),
+(4, 2, NULL, 'diajukan', NULL, '2026-02-09 07:52:34');
 
 -- --------------------------------------------------------
 
@@ -295,7 +328,11 @@ INSERT INTO `log_status_permohonan` (`id`, `permohonan_id`, `status_lama`, `stat
 (15, 13, NULL, 'diajukan', NULL, '2026-02-06 01:30:57'),
 (16, 14, NULL, 'diajukan', NULL, '2026-02-06 01:36:43'),
 (17, 15, NULL, 'diajukan', NULL, '2026-02-06 01:36:49'),
-(18, 16, NULL, 'diajukan', NULL, '2026-02-06 01:38:14');
+(18, 16, NULL, 'diajukan', NULL, '2026-02-06 01:38:14'),
+(19, 16, 'diajukan', 'diproses', 6, '2026-02-09 05:41:11'),
+(20, 15, 'diajukan', 'diproses', 6, '2026-02-09 07:44:22'),
+(21, 15, 'diproses', 'ditolak', 6, '2026-02-09 07:44:32'),
+(22, 17, NULL, 'diajukan', NULL, '2026-02-10 01:18:42');
 
 -- --------------------------------------------------------
 
@@ -342,7 +379,9 @@ INSERT INTO `menus` (`id`, `name`, `url`, `parent_id`, `order_index`, `is_active
 (28, 'BERANDA', 'index.php', 0, 1, 1, '2026-01-29 08:03:39', '2026-02-05 22:08:58'),
 (29, 'PROFIL PPID', '#', 2, 4, 1, '2026-01-29 08:03:39', '2026-02-05 22:08:58'),
 (33, 'Daftar Permohonan', 'pages/daftar-permohonan-publik.php', 4, 12, 1, '2026-02-02 02:23:15', '2026-02-05 22:08:58'),
-(35, 'Daftar Keberatan', '/pages/daftar-keberatan-publik.php', 4, 13, 1, '2026-02-09 01:12:48', '2026-02-09 01:13:46');
+(35, 'Daftar Keberatan', '/pages/daftar-keberatan-publik.php', 4, 13, 1, '2026-02-09 01:12:48', '2026-02-09 01:13:46'),
+(36, 'PROFIL Daerah', '/pages/dip.php', 2, 5, 1, '2026-02-09 02:55:17', '2026-02-09 03:31:45'),
+(37, 'Visi Misi', 'pages/template.php?slug=b', 36, 1, 1, '2026-02-09 03:34:01', '2026-02-09 03:34:01');
 
 -- --------------------------------------------------------
 
@@ -369,14 +408,14 @@ CREATE TABLE `news` (
 
 INSERT INTO `news` (`id`, `title`, `kategori`, `slug`, `excerpt`, `content`, `image`, `status`, `created_at`, `updated_at`) VALUES
 (1, 'Selamat Datang di PPID Kabupaten Dompu', '', 'selamat-datang-di-ppid-kabupaten-dompu', 'Website resmi Pejabat Pengelola Informasi dan Dokumentasi Kabupaten Dompu telah diluncurkan untuk memberikan layanan informasi publik yang lebih transparan dan akuntabel.', '<p>Website resmi PPID Kabupaten Dompu telah diluncurkan untuk memberikan layanan informasi publik yang lebih transparan dan akuntabel.</p><p>Melalui website ini, masyarakat dapat mengakses berbagai informasi terkait pemerintahan daerah Kabupaten Dompu.</p><p>PPID berkomitmen untuk memberikan pelayanan informasi yang cepat, tepat, dan akurat kepada seluruh masyarakat.</p>', NULL, 'published', '2026-01-29 07:55:40', '2026-01-29 07:55:40'),
-(2, 'Hari Pertama Bertugas Kadis Kominfo Dompu Sampaikan Terima Kasih', 'Kegiatan Kepala', 'hari-pertama-bertugas-kadis-kominfo-dompu-sampaikan-terima-kasih', 'Dompu – Hari pertama sejak dilantik sebagai Kepala Dinas Komunikasi dan Informatika Kabupaten Dompu, Muhammad Nursalam, ST. memimpin apel pagi bersama seluruh jajaran di Kantor Dinas Kominfo Kabupat...', '<p>Dompu – Hari pertama sejak dilantik sebagai Kepala Dinas Komunikasi dan Informatika Kabupaten Dompu, Muhammad Nursalam, ST. memimpin apel pagi bersama seluruh jajaran di Kantor Dinas Kominfo Kabupaten Dompu, Selasa (13/1/2026).</p><p>Dalam kesempatan tersebut, Muhammad Nursalam, ST menyampaikan ucapan terima kasih dan apresiasi kepada seluruh jajaran Dinas Kominfo Kabupaten Dompu atas kehadiran, sambutan, serta dukungan yang telah diberikan selama ini.</p>', 'https://ppid.dompukab.go.id/wp-content/uploads/2026/01/a14.jpg', 'published', '2026-01-14 00:00:00', '2026-01-31 11:12:03'),
+(2, 'Hari Pertama Bertugas Kadis Kominfo Dompu Sampaikan Terima Kasih', 'Kegiatan Kepala', 'hari-pertama-bertugas-kadis-kominfo-dompu-sampaikan-terima-kasih', 'Dompu – Hari pertama sejak dilantik sebagai Kepala Dinas Komunikasi dan Informatika Kabupaten Dompu, Muhammad Nursalam, ST. memimpin apel pagi bersama seluruh jajaran di Kantor Dinas Kominfo Kabupat...', '<p>Dompu – Hari pertama sejak dilantik sebagai Kepala Dinas Komunikasi dan Informatika Kabupaten Dompu, Muhammad Nursalam, ST. memimpin apel pagi bersama seluruh jajaran di Kantor Dinas Kominfo Kabupaten Dompu, Selasa (13/1/2026).</p><p>Dalam kesempatan tersebut, Muhammad Nursalam, ST menyampaikan ucapan terima kasih dan apresiasi kepada seluruh jajaran Dinas Kominfo Kabupaten Dompu atas kehadiran, sambutan, serta dukungan yang telah diberikan selama ini.</p>', 'https://ppid.dompukab.go.id/wp-content/uploads/2026/01/a14.jpg', 'published', '2026-01-14 00:00:00', '2026-02-10 01:26:19'),
 (3, 'Kepala Dinas Kominfo Dompu Resmi Dilantik', '', 'kepala-dinas-kominfo-dompu-resmi-dilantik', 'Dompu — Kepala Dinas Komunikasi dan Informatika (Kominfo) Kabupaten Dompu, Yani Hartono, SP. resmi berpindah tugas ke Dinas Sosial Kabupaten Dompu setelah dilantik langsung oleh Bupati Dompu.', '<p>Dompu — Kepala Dinas Komunikasi dan Informatika (Kominfo) Kabupaten Dompu, Yani Hartono, SP. resmi berpindah tugas ke Dinas Sosial Kabupaten Dompu setelah dilantik langsung oleh Bupati Dompu, Bambang Firdaus, SE. pada Senin pagi, 12 Januari 2026.</p><p>Pelantikan tersebut dilaksanakan di Aula Pendopo Bupati Dompu bersama sejumlah pejabat lainnya sebagai bagian dari penataan dan penyegaran organisasi perangkat daerah.</p>', 'https://ppid.dompukab.go.id/wp-content/uploads/2026/01/b1.jpg', 'published', '2026-01-14 00:00:00', '2026-01-29 07:55:40'),
 (4, 'Akselerasi Kinerja Daerah', 'berita', 'akselerasi-kinerja-daerah', 'Dompu — Langkah strategis diambil Bupati Dompu, Bambang Firdaus, SE, dalam memperkokoh struktur birokrasi daerah. Bertempat di Pendopo Bupati pada Senin (12/1/2026), sebanyak 15 pejabat Organisasi P...', '<p>Dompu — Langkah strategis diambil Bupati Dompu, Bambang Firdaus, SE, dalam memperkokoh struktur birokrasi daerah. Bertempat di Pendopo Bupati pada Senin (12/1/2026), sebanyak 15 pejabat Organisasi Perangkat Daerah (OPD) resmi dilantik dan diambil sumpah jabatannya.</p>', 'https://ppid.dompukab.go.id/wp-content/uploads/2026/01/a8-1.jpg', 'published', '2026-01-14 00:00:00', '2026-01-31 16:35:36'),
 (5, 'STQ Desa Daha Resmi Digelar', '', 'stq-desa-daha-resmi-digelar-bupati-dompu-tegaskan-komitmen-pembinaan-keagamaan', 'Dompu – Komitmen Pemerintah Kabupaten Dompu dalam memperkuat pembinaan keagamaan di tingkat desa kembali ditunjukkan melalui pelaksanaan Seleksi Tilawatil Qur\'an (STQ) di Desa Daha.', '<p>Dompu – Komitmen Pemerintah Kabupaten Dompu dalam memperkuat pembinaan keagamaan di tingkat desa kembali ditunjukkan melalui pelaksanaan Seleksi Tilawatil Qur\'an (STQ) di Desa Daha, Kecamatan Hu\'u.</p><p>Kegiatan tersebut secara resmi dibuka oleh Bupati Dompu, Bambang Firdaus, SE, pada Jumat (08/01/2026).</p>', 'https://ppid.dompukab.go.id/wp-content/uploads/2026/01/bb.jpg', 'published', '2026-01-11 00:00:00', '2026-01-29 07:55:40'),
 (6, 'PPID Kabupaten Dompu Luncurkan Layanan Informasi Digital', '', 'ppid-kabupaten-dompu-luncurkan-layanan-informasi-digital', 'PPID Kabupaten Dompu secara resmi meluncurkan layanan informasi digital...', 'PPID Kabupaten Dompu secara resmi meluncurkan layanan informasi digital untuk memudahkan masyarakat dalam mengakses informasi publik.', NULL, 'published', '2026-01-29 08:03:39', '2026-01-29 08:03:39'),
 (7, 'Sosialisasi Keterbukaan Informasi Publik', 'berita', 'sosialisasi-keterbukaan-informasi-publik', 'PPID Kabupaten Dompu mengadakan sosialisasi keterbukaan informasi publik....', 'PPID Kabupaten Dompu mengadakan sosialisasi keterbukaan informasi publik.', '', 'published', '2026-01-29 08:03:39', '2026-01-31 16:35:39'),
-(8, 'TES BERITA BARU', 'berita', 'tes-berita-baru', 'Dompu - lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lor...', 'Dompu - lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametv lorem ipsum dolor sit amet', '1769790152_01KF0851YRGQNHH7VB6NDYS0TM.jpg', 'published', '2026-01-30 16:22:32', '2026-01-31 12:50:24'),
-(11, 'tes', 'berita', 'tes', 'asdfghjkl...', 'asdfghjkl', '', 'published', '2026-02-08 19:59:45', '2026-02-08 19:59:45');
+(8, 'TES BERITA BARU', 'berita', 'tes-berita-baru', 'Dompu - lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lor...', 'Dompu - lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametv lorem ipsum dolor sit amet Dompu - lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametv lorem ipsum dolor sit amet Dompu - lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametv lorem ipsum dolor sit amet', '1769790152_01KF0851YRGQNHH7VB6NDYS0TM.jpg', 'published', '2026-01-30 16:22:32', '2026-02-09 04:24:34'),
+(11, 'tes', 'berita', 'tes', 'asdfghjkl...', 'asdfghjkl', '3f7fa9c297d27146bf220591cd469fb9.png', 'published', '2026-02-08 19:59:45', '2026-02-10 01:25:57');
 
 -- --------------------------------------------------------
 
@@ -582,30 +621,38 @@ CREATE TABLE `permohonan_informasi` (
   `tujuan_penggunaan` text DEFAULT NULL,
   `cara_memperoleh` enum('melihat','salinan','softcopy') NOT NULL,
   `status` enum('diajukan','diproses','ditolak','selesai') DEFAULT 'diajukan',
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `pekerjaan` varchar(150) DEFAULT NULL,
+  `jenis_identitas` varchar(100) DEFAULT NULL,
+  `nomor_identitas` varchar(100) DEFAULT NULL,
+  `scan_identitas` varchar(255) DEFAULT NULL,
+  `tujuan_perangkat` varchar(150) DEFAULT NULL,
+  `cara_mendapatkan` text DEFAULT NULL,
+  `cara_pengambilan` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `permohonan_informasi`
 --
 
-INSERT INTO `permohonan_informasi` (`id`, `nomor_registrasi`, `nama_pemohon`, `email`, `no_hp`, `alamat`, `informasi_diminta`, `tujuan_penggunaan`, `cara_memperoleh`, `status`, `created_at`) VALUES
-(1, 'PPID-20260202-0001', 'rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'bali1', 'Dinas Perpustakaan dan Kearsipan - a', 'woi kerja yang bener', '', 'diproses', '2026-02-02 02:26:47'),
-(2, 'PPID-20260202-0002', 'rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'bali1', 'Dinas Perpustakaan dan Kearsipan - a', 'woi kerja yang bener', '', 'selesai', '2026-02-02 02:36:14'),
-(3, 'PPID-20260203-0001', 'rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'asdfghjk', 'Dinas Kesehatan - dfghjkl;&#039;', 'sdfghjkl;&#039;', '', 'diajukan', '2026-02-03 11:51:23'),
-(4, 'PPID-20260206-0001', 'Rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'alkdss', 'Sekretariat Daerah - Melakukan download melalui website online', 'Untuk kebutuhan PKL', '', 'diajukan', '2026-02-06 00:57:39'),
-(5, 'PPID-20260206-0002', 'Rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'alkdss', 'Sekretariat Daerah - Melakukan download melalui website online', 'Untuk kebutuhan PKL', '', 'diajukan', '2026-02-06 00:59:11'),
-(6, 'PPID-20260206-0003', 'rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'skdnxcnkn ncanca kdnsnc', 'Dinas Sosial - Dengan download melalui web OPD terkait informasi', 'Untuk kebutuhan kegiatan pelaksaan PKL', '', 'diajukan', '2026-02-06 01:01:09'),
-(7, 'PPID-20260206-0004', 'Ali', 'aliali@gmail.com', '0895614220050', 'rfads', 'Dinas Tenaga Kerja - qwertyuiop[lkjhgfzxcvbnm', 'qwertyuiop[', '', 'diajukan', '2026-02-06 01:07:11'),
-(8, 'PPID-20260206-0005', '3_ R. Rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'asndjnmckxkm ca', 'Sekretariat Daerah - wertyuiopkjhgfdsazxcvbnlkjfdawertyuio', 'cn nkcm kk mk mmcnmkmkkjn', '', 'diajukan', '2026-02-06 01:18:58'),
-(9, 'PPID-20260206-0006', '3_ R. Rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'a', 'Sekretariat Daerah - ertyui', 'sdfghjk', '', 'diajukan', '2026-02-06 01:25:20'),
-(10, 'PPID-20260206-0007', '3_ R. Rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'a', 'Sekretariat Daerah - ertyui', 'sdfghjk', '', 'diajukan', '2026-02-06 01:25:35'),
-(11, 'PPID-20260206-0008', '3_ R. Rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'a', 'Sekretariat Daerah - ertyui', 'sdfghjk', '', 'diajukan', '2026-02-06 01:29:33'),
-(12, 'PPID-20260206-0009', '3_ R. Rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'asndjnmckxkm ca', 'Sekretariat Daerah - wertyuiopkjhgfdsazxcvbnlkjfdawertyuio', 'cn nkcm kk mk mmcnmkmkkjn', '', 'diajukan', '2026-02-06 01:29:54'),
-(13, 'PPID-20260206-0010', '3_ R. Rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'sdfghjk', 'Dinas Pekerjaan Umum - s', 's', '', 'diajukan', '2026-02-06 01:30:57'),
-(14, 'PPID-20260206-0011', '3_ R. Rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'sdfghjk', 'Dinas Pekerjaan Umum - s', 's', '', 'diajukan', '2026-02-06 01:36:43'),
-(15, 'PPID-20260206-0012', '3_ R. Rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'asndjnmckxkm ca', 'Sekretariat Daerah - wertyuiopkjhgfdsazxcvbnlkjfdawertyuio', 'cn nkcm kk mk mmcnmkmkkjn', '', 'diajukan', '2026-02-06 01:36:49'),
-(16, 'PPID-20260206-0013', '3_ R. Rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'a', 'Dinas Pendidikan - a', 'aa', '', 'diajukan', '2026-02-06 01:38:14');
+INSERT INTO `permohonan_informasi` (`id`, `nomor_registrasi`, `nama_pemohon`, `email`, `no_hp`, `alamat`, `informasi_diminta`, `tujuan_penggunaan`, `cara_memperoleh`, `status`, `created_at`, `pekerjaan`, `jenis_identitas`, `nomor_identitas`, `scan_identitas`, `tujuan_perangkat`, `cara_mendapatkan`, `cara_pengambilan`) VALUES
+(1, 'PPID-20260202-0001', 'rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'bali1', 'Dinas Perpustakaan dan Kearsipan - a', 'woi kerja yang bener', '', 'diproses', '2026-02-02 02:26:47', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(2, 'PPID-20260202-0002', 'rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'bali1', 'Dinas Perpustakaan dan Kearsipan - a', 'woi kerja yang bener', '', 'selesai', '2026-02-02 02:36:14', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(3, 'PPID-20260203-0001', 'rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'asdfghjk', 'Dinas Kesehatan - dfghjkl;&#039;', 'sdfghjkl;&#039;', '', 'diajukan', '2026-02-03 11:51:23', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(4, 'PPID-20260206-0001', 'Rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'alkdss', 'Sekretariat Daerah - Melakukan download melalui website online', 'Untuk kebutuhan PKL', '', 'diajukan', '2026-02-06 00:57:39', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(5, 'PPID-20260206-0002', 'Rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'alkdss', 'Sekretariat Daerah - Melakukan download melalui website online', 'Untuk kebutuhan PKL', '', 'diajukan', '2026-02-06 00:59:11', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(6, 'PPID-20260206-0003', 'rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'skdnxcnkn ncanca kdnsnc', 'Dinas Sosial - Dengan download melalui web OPD terkait informasi', 'Untuk kebutuhan kegiatan pelaksaan PKL', '', 'diajukan', '2026-02-06 01:01:09', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(7, 'PPID-20260206-0004', 'Ali', 'aliali@gmail.com', '0895614220050', 'rfads', 'Dinas Tenaga Kerja - qwertyuiop[lkjhgfzxcvbnm', 'qwertyuiop[', '', 'diajukan', '2026-02-06 01:07:11', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(8, 'PPID-20260206-0005', '3_ R. Rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'asndjnmckxkm ca', 'Sekretariat Daerah - wertyuiopkjhgfdsazxcvbnlkjfdawertyuio', 'cn nkcm kk mk mmcnmkmkkjn', '', 'diajukan', '2026-02-06 01:18:58', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(9, 'PPID-20260206-0006', '3_ R. Rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'a', 'Sekretariat Daerah - ertyui', 'sdfghjk', '', 'diajukan', '2026-02-06 01:25:20', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(10, 'PPID-20260206-0007', '3_ R. Rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'a', 'Sekretariat Daerah - ertyui', 'sdfghjk', '', 'diajukan', '2026-02-06 01:25:35', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(11, 'PPID-20260206-0008', '3_ R. Rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'a', 'Sekretariat Daerah - ertyui', 'sdfghjk', '', 'diajukan', '2026-02-06 01:29:33', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(12, 'PPID-20260206-0009', '3_ R. Rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'asndjnmckxkm ca', 'Sekretariat Daerah - wertyuiopkjhgfdsazxcvbnlkjfdawertyuio', 'cn nkcm kk mk mmcnmkmkkjn', '', 'diajukan', '2026-02-06 01:29:54', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(13, 'PPID-20260206-0010', '3_ R. Rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'sdfghjk', 'Dinas Pekerjaan Umum - s', 's', '', 'diajukan', '2026-02-06 01:30:57', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(14, 'PPID-20260206-0011', '3_ R. Rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'sdfghjk', 'Dinas Pekerjaan Umum - s', 's', '', 'diajukan', '2026-02-06 01:36:43', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(15, 'PPID-20260206-0012', '3_ R. Rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'asndjnmckxkm ca', 'Sekretariat Daerah - wertyuiopkjhgfdsazxcvbnlkjfdawertyuio', 'cn nkcm kk mk mmcnmkmkkjn', '', 'ditolak', '2026-02-06 01:36:49', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(16, 'PPID-20260206-0013', '3_ R. Rafi', 'rafiyudipramana@gmail.com', '0895614220050', 'a', 'Dinas Pendidikan - a', 'aa', '', 'diproses', '2026-02-06 01:38:14', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(17, 'PPID-20260210-0001', 'reksa', 'rafipramana96@gmail.com', '0895614220050', 'bali 1', 'adasd', 'sdaf', '', 'diajukan', '2026-02-10 01:18:42', 'TNI/Polri', 'KTP', '123456', 'uploads/Kabupaten_Dompu_2026-02-10_02-18-42_7788295b.png', 'Sekretariat Daerah', 'sdadsa', 'Langsung di Kantor PPID');
 
 -- --------------------------------------------------------
 
@@ -854,13 +901,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `admin_audit_log`
 --
 ALTER TABLE `admin_audit_log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- AUTO_INCREMENT for table `daftar_informasi_publik`
 --
 ALTER TABLE `daftar_informasi_publik`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `external_websites`
@@ -890,25 +937,25 @@ ALTER TABLE `jawaban_permohonan`
 -- AUTO_INCREMENT for table `keberatan`
 --
 ALTER TABLE `keberatan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `log_status_keberatan`
 --
 ALTER TABLE `log_status_keberatan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `log_status_permohonan`
 --
 ALTER TABLE `log_status_permohonan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `menus`
 --
 ALTER TABLE `menus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `news`
@@ -950,7 +997,7 @@ ALTER TABLE `page_table_rows`
 -- AUTO_INCREMENT for table `permohonan_informasi`
 --
 ALTER TABLE `permohonan_informasi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `settings`

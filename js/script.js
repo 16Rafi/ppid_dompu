@@ -136,6 +136,45 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// DIP table search & sort
+document.addEventListener('DOMContentLoaded', function() {
+    const table = document.getElementById('dipTable');
+    const searchInput = document.getElementById('dipSearch');
+    if (!table || !searchInput) return;
+
+    const tbody = table.querySelector('tbody');
+    if (!tbody) return;
+    let rows = Array.from(tbody.querySelectorAll('tr'));
+
+    searchInput.addEventListener('input', function() {
+        const q = this.value.toLowerCase();
+        rows.forEach(row => {
+            const text = row.textContent.toLowerCase();
+            row.style.display = text.includes(q) ? '' : 'none';
+        });
+    });
+
+    const headers = table.querySelectorAll('thead th');
+    headers.forEach((th, index) => {
+        th.classList.add('sortable');
+        let asc = true;
+        th.addEventListener('click', function() {
+            rows = Array.from(tbody.querySelectorAll('tr'));
+            const sorted = rows.slice().sort((a, b) => {
+                const aText = (a.children[index]?.textContent || '').trim();
+                const bText = (b.children[index]?.textContent || '').trim();
+                if (!aText && !bText) return 0;
+                if (th.dataset.sort === 'number') {
+                    return asc ? (Number(aText) - Number(bText)) : (Number(bText) - Number(aText));
+                }
+                return asc ? aText.localeCompare(bText) : bText.localeCompare(aText);
+            });
+            sorted.forEach(r => tbody.appendChild(r));
+            asc = !asc;
+        });
+    });
+});
+
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');

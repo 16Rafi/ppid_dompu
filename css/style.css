@@ -635,7 +635,7 @@ section {
 }
 
 .news-section .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -676,16 +676,16 @@ section {
 .news-list {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 22px;
 }
 
 .news-item {
     display: flex;
-    gap: 16px;
+    gap: 20px;
     align-items: flex-start;
     background: #FCFDFD;
     border-radius: 8px;
-    padding: 16px;
+    padding: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -696,8 +696,8 @@ section {
 }
 
 .news-img {
-    width: 140px;
-    height: 90px;
+    width: 180px;
+    height: 120px;
     flex-shrink: 0;
     border-radius: 6px;
     overflow: hidden;
@@ -723,7 +723,7 @@ section {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 6px;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .news-category {
@@ -747,7 +747,7 @@ section {
 
 .news-title {
     margin: 0;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
     color: #093A5A;
     line-height: 1.3;
@@ -4267,6 +4267,19 @@ body.daftar-permohonan-body footer.footer {
     color: #F4B800;
 }
 
+.dip-table th.sortable {
+    cursor: pointer;
+    position: relative;
+}
+
+.dip-table th.sortable::after {
+    content: '?';
+    font-size: 0.75rem;
+    margin-left: 6px;
+    opacity: 0.85;
+    color: #F4B800;
+}
+
 .page-template {
     min-height: 100vh;
     display: flex;
@@ -4382,6 +4395,21 @@ body.daftar-permohonan-body footer.footer {
     justify-content: space-between;
     margin-bottom: 1rem;
     gap: 1rem;
+}
+
+.dip-table-controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.dip-table-controls .page-table-search {
+    max-width: 320px;
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #d9e2ec;
+    border-radius: 6px;
+    font-size: 0.95rem;
 }
 
 .dip-terbaru-link {

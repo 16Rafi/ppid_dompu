@@ -36,6 +36,21 @@ function generateRegistrationNumber() {
     return $prefix . sprintf('%04d', $newNumber);
 }
 
+function permohonanHasColumn($columnName) {
+    global $conn;
+    static $cache = null;
+    if ($cache === null) {
+        $cache = [];
+        $stmt = $conn->prepare("SELECT column_name FROM information_schema.columns WHERE table_schema = DATABASE() AND table_name = 'permohonan_informasi'");
+        $stmt->execute();
+        $res = $stmt->get_result();
+        while ($row = $res->fetch_assoc()) {
+            $cache[] = (string)($row['column_name'] ?? '');
+        }
+    }
+    return in_array($columnName, $cache, true);
+}
+
 /**
  * Save information request to database
  */
@@ -49,31 +64,64 @@ function savePermohonanInformasi($data) {
         // Generate registration number
         $nomorRegistrasi = generateRegistrationNumber();
         
-        // Insert into permohonan_informasi
-        $stmt = $conn->prepare("
-            INSERT INTO permohonan_informasi 
-            (nomor_registrasi, nama_pemohon, email, no_hp, alamat, pekerjaan, jenis_identitas, nomor_identitas, scan_identitas, tujuan_perangkat, informasi_diminta, tujuan_penggunaan, cara_mendapatkan, cara_pengambilan, cara_memperoleh, status) 
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'diajukan')
-        ");
-        
-        $stmt->bind_param(
-            "sssssssssssssss",
-            $nomorRegistrasi,
-            $data['nama_pemohon'],
-            $data['email'],
-            $data['no_hp'],
-            $data['alamat'],
-            $data['pekerjaan'],
-            $data['jenis_identitas'],
-            $data['nomor_identitas'],
-            $data['scan_identitas'],
-            $data['tujuan_perangkat'],
-            $data['informasi_diminta'],
-            $data['tujuan_penggunaan'],
-            $data['cara_mendapatkan'],
-            $data['cara_pengambilan'],
-            $data['cara_memperoleh']
-        );
+        // Build dynamic insert based on available columns
+        $fields = ['nomor_registrasi', 'nama_pemohon', 'email', 'no_hp', 'alamat'];
+        $values = [$nomorRegistrasi, $data['nama_pemohon'], $data['email'], $data['no_hp'], $data['alamat']];
+        $types = 'sssss';
+
+        if (permohonanHasColumn('pekerjaan')) {
+            $fields[] = 'pekerjaan';
+            $values[] = $data['pekerjaan'];
+            $types .= 's';
+        }
+        if (permohonanHasColumn('jenis_identitas')) {
+            $fields[] = 'jenis_identitas';
+            $values[] = $data['jenis_identitas'];
+            $types .= 's';
+        }
+        if (permohonanHasColumn('nomor_identitas')) {
+            $fields[] = 'nomor_identitas';
+            $values[] = $data['nomor_identitas'];
+            $types .= 's';
+        }
+        if (permohonanHasColumn('scan_identitas')) {
+            $fields[] = 'scan_identitas';
+            $values[] = $data['scan_identitas'];
+            $types .= 's';
+        }
+
+        $fields[] = 'tujuan_perangkat';
+        $values[] = $data['tujuan_perangkat'];
+        $types .= 's';
+
+        $fields[] = 'informasi_diminta';
+        $values[] = $data['informasi_diminta'];
+        $types .= 's';
+
+        $fields[] = 'tujuan_penggunaan';
+        $values[] = $data['tujuan_penggunaan'];
+        $types .= 's';
+
+        $fields[] = 'cara_mendapatkan';
+        $values[] = $data['cara_mendapatkan'];
+        $types .= 's';
+
+        $fields[] = 'cara_pengambilan';
+        $values[] = $data['cara_pengambilan'];
+        $types .= 's';
+
+        $fields[] = 'cara_memperoleh';
+        $values[] = $data['cara_memperoleh'];
+        $types .= 's';
+
+        $fields[] = 'status';
+        $values[] = 'diajukan';
+        $types .= 's';
+
+        $fieldList = implode(', ', $fields);
+        $placeholders = implode(', ', array_fill(0, count($fields), '?'));
+        $stmt = $conn->prepare("INSERT INTO permohonan_informasi ($fieldList) VALUES ($placeholders)");
+        $stmt->bind_param($types, ...$values);
         
         if (!$stmt->execute()) {
             throw new Exception("Gagal menyimpan permohonan: " . $stmt->error);
@@ -280,6 +328,27 @@ function validatePermohonanData($data) {
         'cara_pengambilan',
         'cara_memperoleh'
     ];
+
+    if (!permohonanHasColumn('pekerjaan')) {
+        $required = array_values(array_filter($required, function($item) {
+            return $item !== 'pekerjaan';
+        }));
+    }
+    if (!permohonanHasColumn('jenis_identitas')) {
+        $required = array_values(array_filter($required, function($item) {
+            return $item !== 'jenis_identitas';
+        }));
+    }
+    if (!permohonanHasColumn('nomor_identitas')) {
+        $required = array_values(array_filter($required, function($item) {
+            return $item !== 'nomor_identitas';
+        }));
+    }
+    if (!permohonanHasColumn('scan_identitas')) {
+        $required = array_values(array_filter($required, function($item) {
+            return $item !== 'scan_identitas';
+        }));
+    }
     
     foreach ($required as $field) {
         if (empty($data[$field])) {

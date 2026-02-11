@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $uploadedFilePath = '';
     
     // Validasi required fields
-    $required_fields = ['nama_lengkap', 'alamat', 'email', 'pekerjaan', 'jenis_identitas', 'nomor_identitas', 'tujuan_perangkat', 'tujuan_informasi', 'cara_mendapatkan', 'cara_pengambilan'];
+    $required_fields = ['nama_lengkap', 'alamat', 'email', 'pekerjaan', 'jenis_identitas', 'nomor_identitas', 'informasi_diminta', 'tujuan_perangkat', 'tujuan_informasi', 'cara_mendapatkan', 'cara_pengambilan'];
     
     foreach ($required_fields as $field) {
         if (empty($_POST[$field])) {
@@ -58,6 +58,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     if (empty($errors)) {
         // Prepare data for database
+        $informasiDiminta = trim((string)($_POST['informasi_diminta'] ?? ''));
+        if ($informasiDiminta === '') {
+            $informasiDiminta = $_POST['tujuan_perangkat'] . ' - ' . $_POST['cara_mendapatkan'];
+        }
+
         $permohonanData = [
             'nama_pemohon' => $_POST['nama_lengkap'],
             'email' => $_POST['email'],
@@ -68,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'nomor_identitas' => $_POST['nomor_identitas'],
             'scan_identitas' => $scanPath ?? '',
             'tujuan_perangkat' => $_POST['tujuan_perangkat'],
-            'informasi_diminta' => $_POST['tujuan_perangkat'] . ' - ' . $_POST['cara_mendapatkan'],
+            'informasi_diminta' => $informasiDiminta,
             'tujuan_penggunaan' => $_POST['tujuan_informasi'],
             'cara_mendapatkan' => $_POST['cara_mendapatkan'],
             'cara_pengambilan' => $_POST['cara_pengambilan'],
@@ -141,6 +146,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="section">
                                 <h4>Detail Permohonan</h4>
                                 <table>
+                                    <tr><td class="label-td">Informasi yang Diminta</td><td>' . htmlspecialchars($_POST['informasi_diminta']) . '</td></tr>
                                     <tr><td class="label-td">Tujuan Perangkat</td><td>' . htmlspecialchars($_POST['tujuan_perangkat']) . '</td></tr>
                                     <tr><td class="label-td">Tujuan Informasi</td><td>' . htmlspecialchars($_POST['tujuan_informasi']) . '</td></tr>
                                     <tr><td class="label-td">Cara Mendapatkan</td><td>' . htmlspecialchars($_POST['cara_mendapatkan']) . '</td></tr>
@@ -353,6 +359,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="form-section">
                     <h2 class="section-title">Detail Permohonan Informasi</h2>
                     
+                    <div class="form-group">
+                        <label for="informasi_diminta">Informasi yang Diminta <span class="required">*</span></label>
+                        <textarea id="informasi_diminta" name="informasi_diminta" rows="4" required placeholder="Tuliskan informasi yang Anda butuhkan..."></textarea>
+                    </div>
+
                     <div class="form-group">
                         <label for="tujuan_perangkat">Perangkat Daerah Tujuan <span class="required">*</span></label>
                         <select id="tujuan_perangkat" name="tujuan_perangkat" required>

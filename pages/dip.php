@@ -80,16 +80,22 @@ $dipList = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
                 </div>
             </div>
 
+            <div class="dip-table-controls">
+                <div class="page-table-search-wrap">
+                    <input type="text" id="dipSearch" class="page-table-search" placeholder="Cari data DIP...">
+                </div>
+            </div>
+
             <div class="table-container">
-                <table class="dip-table">
+                <table class="dip-table" id="dipTable">
                     <thead>
                         <tr>
-                            <th>No</th>
-                            <th>Judul</th>
-                            <th>Ringkasan</th>
-                            <th>Kategori</th>
-                            <th>Tahun</th>
-                            <th>Lampiran</th>
+                            <th data-sort="number">No</th>
+                            <th data-sort="text">Judul</th>
+                            <th data-sort="text">Ringkasan</th>
+                            <th data-sort="text">Kategori</th>
+                            <th data-sort="text">Tahun</th>
+                            <th data-sort="text">Lampiran</th>
                         </tr>
                     </thead>
                     <tbody>
